@@ -1,0 +1,255 @@
+/* ----------- FourthPage -------------- */
+.Project{
+  width: 100%;
+  background-color: #e4e4e4d3;  
+}
+.Project h1{
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 100px 0 35px;
+  color: #2b2a2a;
+  text-shadow: 10px 10px 20px #4e4949;
+}
+.Project .row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 75px 0;
+  margin: auto;
+}
+.Project .col-2{
+  flex-basis: 50%;
+  box-sizing: border-box;
+  border: 2px solid #2b1f1f;
+  margin: 0 1%;
+  height: 65vmin;
+  position: relative;
+  overflow: hidden;
+}
+.Project img{
+  width: 100%;
+  height: 100%;
+}
+.Project .text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background: linear-gradient(rgb(0, 0, 0, .4),rgb(0, 0, 0, .6));
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.5;
+  opacity: 0;
+  transform:scale(0);
+  transition: .5s;
+}
+.col-2:hover .text{
+  opacity: 1;
+  transform:scale(1);
+  backdrop-filter: blur(5px);
+}
+.link{
+  position: absolute;
+  bottom: 3%;
+  right: 0;
+  display: flex;
+}
+.link a{
+  width: 75px;
+  height: 75px;
+  box-sizing: border-box;
+  padding-right: 10%;
+}
+.text .viewmore{
+  text-decoration: none;
+  color: #fff;
+  width: 35%;
+  position: absolute;
+  bottom: 16%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: .5s linear;
+}
+.text .viewmore:hover{
+  background: linear-gradient(rgb(57, 247, 190),rgba(16, 94, 81, 0.712));
+  border: 1px solid rgba(16, 94, 81, 0.712);
+  transform: scale(1.2);
+}
+.text-close-btn{
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  width: 20px;
+  height: 20px;
+  text-decoration: none;
+}
+.text-close{
+  position: fixed;
+  right: 12%;
+  bottom: 8%;
+  width: 50px;
+  height: 50px;
+  background: #50c9c3;
+  border-radius: 50%;
+  visibility: hidden;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  line-height: 2.5;
+  z-index: 5;
+}
+.introduceText{
+  width: 90%;
+  height: 85%;
+  position: fixed;
+  top: 10%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background: rgb(41, 41, 41);
+  color: #9e9e9e;
+  padding: 2% 5%;
+  box-sizing: border-box;
+  border: 3px solid rgb(22, 63, 97);
+  line-height: 1.8;
+  overflow-y: scroll;
+  z-index: 9;
+  display: none;
+}
+.introduceText.show{
+  display: block;
+}
+.view-More-Text{
+  box-sizing: border-box;
+  padding: 30px 0;
+  word-break: break-all;
+}
+
+.projectcarousel{
+  background: rgb(41, 41, 41);
+}
+.carousel{
+  margin: auto;
+  box-sizing: border-box;
+  padding: 5% 0;
+  position: relative;
+}
+.carousel .pic{
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+.carousel .pic img{
+  max-width: 100%;
+  border: 2px solid #2b1f1f;
+  box-sizing: border-box;
+  position: absolute;
+}
+.btn-left img,.btn-right img{
+  width: 100%;
+  opacity: 0.8;
+}
+.carousel .btn-right{
+  right: 0;
+}
+.carousel .btn-left{
+  left: 0;
+}
+.carousel .btn-right, .carousel .btn-left{
+  position: absolute;
+  width: 40px;
+  bottom: 45%;
+  background-color: transparent;
+  border: 2px solid rgb(179, 179, 179);
+}
+.carousel .btn-right:hover, .carousel .btn-left:hover{
+  border-color: rgb(59, 54, 54);
+}
+
+
+/*------ RWD -------*/
+@media screen and (max-width:970px) {
+  .Project .row{
+    flex-direction: column;
+    padding: 0;
+  }
+  .Project .col-2{
+    flex-basis: 100%;
+    margin: 3% 2%;
+  }
+  .Project h1{
+    padding: 50px 0;
+  }
+  .text .viewmore{
+    bottom: 10%;
+  }
+  .carousel .btn-right, .carousel .btn-left{
+    bottom: 42%;
+  }
+  .carousel .btn-left>img, .carousel .btn-right>img{
+    width: 70%;
+  }
+}
+@media screen and (max-width:600px) {
+  .Project .text{
+    font-size: .7rem;
+  }
+  .Project p{
+    margin-bottom: 5%;
+  }
+  .link a{
+    width: 60px;
+    height: 60px;
+  }
+  .text-close-btn{
+    width: 15px;
+    height: 15px;
+    top: 0;
+  }
+}
+@media screen and (max-width:485px) {
+ .Project h1{
+    font-size: 2rem;
+  }
+    .Project p{
+    margin-bottom: 10%;
+  }
+  .link{
+    padding-bottom: 2%;
+  }
+  .link a{
+    width: 50px;
+    height: 50px;
+  } 
+  .carousel .btn-right, .carousel .btn-left{
+    bottom: 65%;
+  }
+  .carousel .btn-left>img, .carousel .btn-right>img{
+    width: 70%;
+  }
+  .carousel .pic{
+    height: 40vh;
+  }
+}
+@media screen and (max-width:395px) {
+  .link a{
+    width: 35px;
+    height: 35px;
+  }
+  .text .viewmore{
+    bottom: 8%;
+  }
+  .text-close-btn{
+    right: 2%;
+  }
+  
+}
