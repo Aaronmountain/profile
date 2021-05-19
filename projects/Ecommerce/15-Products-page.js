@@ -1,7 +1,11 @@
 import onViewEntry, { option } from "./lazyLoading.js";
 
-const addBtn = document.getElementById('btn'); //addItem function click event
-const quantityInput = document.getElementsByClassName("carts-input");   //input value change event
+const addBtn = document.getElementById('btn');
+const quantityInput = document.getElementsByClassName("carts-input");
+
+const navbar = document.getElementById("menu");
+const menu = document.querySelector(".menu");
+navbar.style.maxHeight = "0px";
 
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", ready)
@@ -10,44 +14,36 @@ if (document.readyState === "loading") {
 }
 
 function ready() {
-    // lazylodaing Img
     let imgWatcher = new IntersectionObserver(onViewEntry, option);
-    // 取出有戴 data-src 屬性的 img
     let lazyImages = document.querySelectorAll('[data-src]');
-    // 監聽 lazyloading 事件
     lazyImages.forEach(image => imgWatcher.observe(image))
 
     localItems()
 
     // ----- RWDcontrols -----
-    const menu = document.getElementById("menu");
-    menu.style.maxHeight = "0px";
     menu.addEventListener('click', menutoggle)
-    // small Photo Switch
+
     smallProductImg()
 
-    // input 數量不得有負數
+    // input event
     for (let i = 0; i < quantityInput.length; i++) {
         let input = quantityInput[i];
         input.addEventListener("change", quantityChanged);
     }
 
-    // 點擊加入購物車按鈕，將資料添加到 localStorage
     addBtn.addEventListener('click', addItem);
-
 }
 
-// RWD　Menu Control
+// RWD
 function menutoggle() {
-    if (menu.style.maxHeight == "0px") {
-        menu.style.maxHeight = "200px";
+    if (navbar.style.maxHeight == "0px") {
+        navbar.style.maxHeight = "200px";
     } else {
-        menu.style.maxHeight = "0px";
+        navbar.style.maxHeight = "0px";
     }
 
 }
 
-// small Photo Switch
 function smallProductImg() {
     let productsImg = document.getElementById("products_img");
     let smallImg = document.querySelectorAll(".smallImg");
@@ -59,7 +55,7 @@ function smallProductImg() {
     });
 }
 
-// Input change event 所對應的函式
+// Input change event 
 function quantityChanged(e) {
     let input = e.target;
     if (isNaN(input.value) || input.value <= 0) {
@@ -69,12 +65,10 @@ function quantityChanged(e) {
 
 const Item = document.querySelector('.ItemTitle');
 const ItemImg = document.getElementById('products_img');
-// Add To Cart click event and setItem to localStorage
+
 function addItem(e) {
-    // 確認商品是否已添加至購物車
     if (checkStorage()) return alert('您以選購此商品了');
 
-    // 取出商品的，名稱,價格,數量,網址,尺寸，添加至 localStorage 中
     const id = new Date().getTime().toString();
     Item.setAttribute('id', id);
     let ItemImgSrc = ItemImg.src;
@@ -86,41 +80,30 @@ function addItem(e) {
         if (index == sizeNumber) return size
     })
 
-    // 判斷使用者使否選擇尺寸
     if (size === undefined) return alert('請選擇尺寸，謝謝您')
 
-    // 加入購物車，將 inputValue 還原
     let form = document.getElementsByTagName("form");
     for (let i = 0; i < form.length; i++) {
         form[i].reset();
     }
     addLocalStorage(id, Item.textContent, ItemImgSrc, quantityValue, price, size)
 
-    // 顯示購物車旁的商品數量
     localItems();
 
-    // 顯示成功加入購物車的訊息
     displayText()
 }
 
-// 新增資料至 LocalStorage
 function addLocalStorage(id, ItemTitle, ImgSrc, quantity, price, size) {
-    // 取得 inputvalue 及屬於自己的 id ， 賦值給itemData
     const itemData = { id, title: ItemTitle, src: ImgSrc, quantity: quantity, price: price, size: size };
-    // item = 假如 localStorage 有 list 這個 key的名稱 ，則將 list這個key名稱的value轉成陣列 ;  若沒有則是空陣列
     let items = getlocalStorageItem();
-    // items 等於陣列 ， 陣列內新增 id and inputValue 
     items.push(itemData);
-    // 將 items 轉為JSON字符串，傳到 localStorage 中， ket=list ，value=items
     localStorage.setItem('product', JSON.stringify(items));
 }
 
-// 從 LocalStorage 取得資料
 function getlocalStorageItem() {
     return localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : [];
 }
 
-// 檢查商品是否已存在於購物車 ture or false
 function checkStorage() {
     let items = getlocalStorageItem();
     return items.some(item => {
@@ -128,7 +111,6 @@ function checkStorage() {
     })
 }
 
-// 判斷是否該顯示購物車旁顯示商品數量
 function localItems() {
     let carticon = document.querySelector('.cart')
     let cartItemsNumber = carticon.nextElementSibling;
@@ -143,7 +125,6 @@ function localItems() {
     }
 }
 
-// 成功添加至購物車的訊息
 function displayText() {
     let ok = document.querySelector('.ok')
     ok.style.display = 'block';

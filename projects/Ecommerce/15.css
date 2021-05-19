@@ -188,4 +188,7 @@ input[type="number"]:focus{
       display: block;
       cursor: pointer;
   }
+  .row{
+    justify-content: center;
+  }
 }

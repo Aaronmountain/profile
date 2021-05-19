@@ -228,9 +228,6 @@ a.purchase{
     }
     
     /*----- 購物車中商品資訊 -----*/
-    .Cart-Row .ItemTitle{
-        font-size: .6rem;
-    }
     .Cart-Row > div .ItemSize{
         font-size: 15px;
         bottom: 10%;
@@ -248,90 +245,90 @@ a.purchase{
 /* RWD width:600px 以下 */
 @media screen and (max-width:650px)
 {
-    .row{
-        text-align: center;
-    }
-    .col-2, .col-3, .col-4{
-        flex-basis: 100%;
-    }
-    /*----- 購物車無商品時的文字 ------ */
-    .goToShopText h2{
-        top: 35%;
-        font-size: 1.3rem;
-    }
-    .goToShopText span{
-        font-size: 1.2rem;
-    }
-    .goToShopText a{
-        top: 50%;
-    }
+  .row{
+      text-align: center;
+  }
+  .col-2, .col-3, .col-4{
+      flex-basis: 100%;
+  }
+  /*----- 購物車無商品時的文字 ------ */
+  .goToShopText h2{
+      top: 35%;
+      font-size: 1.3rem;
+  }
+  .goToShopText span{
+      font-size: 1.2rem;
+  }
+  .goToShopText a{
+      top: 50%;
+  }
 
-    /*----- 購物車中商品資訊 -----*/
-    .Cart-Row{
-        padding: 65px 0;
-    }
-    .itemsinfo span{
-        flex-basis: 34%;
-    }
-    .itemsinfo>span{
-        position: relative;
-        left: 8%;
-    }
-    .Cart-Row img{
-        position: absolute;
-        top: 5%;
-        left: 5%;
-    }
-    .Cart-Row .ItemTitle{
-        padding-top: 35%;
-        font-size: .6rem;
-        position: relative;
-        left: 10%;
-    }
-    .Cart-Row > div .ItemSize{
-        font-size: 20px;
-        left: 5%;
-    }
-    .Cart-Row .cart-price{
-        position: relative;
-        right: 15%;
-    }
-    .Cart-Row:nth-child(2) .ItemTitle, .Cart-Row:nth-child(3) .ItemTitle{
-        position: absolute;
-        bottom: 30%;
-        left: 7%;
-        font-size: .5rem;
-    }
-    .Cart-Row .carts-input{
-        left: 47%;
-    }
+  /*----- 購物車中商品資訊 -----*/
+  .Cart-Row{
+      padding: 65px 0;
+  }
+  .itemsinfo span{
+      flex-basis: 34%;
+  }
+  .itemsinfo>span{
+      position: relative;
+      left: 8%;
+  }
+  .Cart-Row img{
+      position: absolute;
+      top: 5%;
+      left: 5%;
+  }
+  .Cart-Row .ItemTitle{
+      font-size: .6rem;
+      position: absolute;
+      bottom: 30%;
+      left: 10%;
+  }
+  .Cart-Row > div .ItemSize{
+      font-size: 20px;
+      left: 5%;
+  }
+  .Cart-Row .cart-price{
+      position: relative;
+      right: 15%;
+  }
+  .Cart-Row:nth-child(2) .ItemTitle, .Cart-Row:nth-child(3) .ItemTitle{
+      position: absolute;
+      bottom: 30%;
+      left: 7%;
+      font-size: .5rem;
+  }
+  .Cart-Row .carts-input{
+      left: 47%;
+  }
 }
 
 @media screen and (max-width:490px)
 {
-    /*----- 購物車無商品時的文字 ------ */
-    .goToShopText h2{
-        font-size: 1rem;
-    }
-    .goToShopText span{
-        font-size: .8rem;
-    }
-    .goToShopText a{
-        top: 45%;
-    }
+  /*----- 購物車無商品時的文字 ------ */
+  .goToShopText h2{
+      font-size: 1rem;
+  }
+  .goToShopText span{
+      font-size: .8rem;
+  }
+  .goToShopText a{
+      top: 45%;
+  }
 
-    /*----- 購物車中商品資訊 -----*/
-    .itemsinfo span{
-        flex-basis: 33%;
-    }
-    .Cart-Row .ItemTitle{
-        left: 5%;
-    }
-    .Cart-Row .cart-price{
-        right: 10%;
-    }
-    .Cart-Row .Remove-items-btn{
-        bottom: 15%;
-        right: 8%;
-    }
+  /*----- 購物車中商品資訊 -----*/
+  .itemsinfo span{
+      flex-basis: 33%;
+  }
+  .Cart-Row .ItemTitle{
+      left: 5%;
+  }
+  .Cart-Row .cart-price{
+      right: 10%;
+  }
+  .Cart-Row .Remove-items-btn{
+      bottom: 15%;
+      right: 8%;
+  }
 }

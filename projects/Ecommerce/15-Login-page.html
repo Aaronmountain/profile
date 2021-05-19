@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="sideproject15-Loginpage.css">
     <link rel="stylesheet" href="15.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Carts -Ecommerce</title>
 </head>
+
 <body>
 
     <!-- navbar -->
@@ -38,7 +39,7 @@
                 <div class="col-2">
                     <img src="./images_sideproject15/15.png" alt="background" width="100%">
                 </div>
-                
+
                 <div class="col-2">
                     <div class="form_container">
                         <div class="form_btn">
@@ -81,7 +82,8 @@
                 </div>
                 <div class="footer-col-2">
                     <img src="./images_sideproject15/logo.png" alt="logoimg">
-                    <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+                    <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor
+                        sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
                 </div>
                 <div class="footer-col-3">
                     <h3>Usefu Links</h3>
@@ -106,20 +108,19 @@
             <p class="copyright">Copyright © 2021 Easy Tutorials</p>
         </div>
     </div>
-  
-    <script>
-        const menu=document.getElementById("menu");
 
-        menu.style.maxHeight= "0px";
-        
-        function menutoggle(){
-           if(menu.style.maxHeight == "0px")
-           {
-            menu.style.maxHeight= "200px";
-           }else
-           {
-            menu.style.maxHeight= "0px";
-           }
+    <script>
+        const navbar = document.getElementById("menu");
+        const menu = document.querySelector(".menu");
+
+        navbar.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (navbar.style.maxHeight == "0px") {
+                navbar.style.maxHeight = "200px";
+            } else {
+                navbar.style.maxHeight = "0px";
+            }
         }
     </script>
 
@@ -128,16 +129,14 @@
         const LoginForm = document.getElementById("LoginForm");
         const RegForm = document.getElementById("RegForm");
         const Indicator = document.getElementById("Indicator");
- 
-        function Login()
-        {
+
+        function Login() {
             LoginForm.style.transform = "translateX(300px)";
             RegForm.style.transform = "translateX(300px)";
             Indicator.style.transform = "translateX(0px)";
         }
 
-        function Register()
-        {
+        function Register() {
             LoginForm.style.transform = "translateX(0px)";
             RegForm.style.transform = "translateX(0px)";
             Indicator.style.transform = "translateX(100px)";
@@ -146,4 +145,5 @@
     </script>
 
 </body>
+
 </html>
