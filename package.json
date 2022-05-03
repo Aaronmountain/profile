@@ -12,6 +12,16 @@
     "check-eslint": "eslint src/**/*.ts{,x}",
     "check-stylelint": "stylelint --config .stylelintrc.js src/**/*.styles.ts"
   },
+  "lint-staged": {
+    "*.(ts|tsx)": [
+      "prettier --write",
+      "eslint --quiet --fix",
+      "stylelint --config .stylelintrc.js"
+    ]
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
   "dependencies": {
     "classnames": "^2.3.1",
     "next": "12.1.5",
@@ -29,6 +39,7 @@
     "@types/styled-jsx": "^3.4.4",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
+    "lint-staged": "^12.4.1",
     "pre-commit": "^1.2.2",
     "prettier": "^2.6.2",
     "sass": "^1.51.0",

@@ -21,10 +21,6 @@ export default css`
     right: -6% !important;
   }
 
-  :global(.slick-prev.dark:before, .slick-next.dark:before) {
-    color: black !important;
-  }
-
   /* dots */
   :global(.slick-dots) {
     bottom: -63px;
@@ -35,11 +31,11 @@ export default css`
     height: 42px;
   }
 
-  :global(.slick-dots li button:before) {
+  :global(.slick-dots li button::before) {
     font-size: 1.25rem !important;
   }
 
-  :global(.slick-dots li.slick-active button:before) {
+  :global(.slick-dots li.slick-active button::before) {
     color: #fff;
   }
 `;
