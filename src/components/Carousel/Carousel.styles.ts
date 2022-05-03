@@ -21,6 +21,10 @@ export default css`
     right: -6% !important;
   }
 
+  :global(.slick-prev.dark::before, .slick-next.dark::before) {
+    color: black !important;
+  }
+
   /* dots */
   :global(.slick-dots) {
     bottom: -63px;

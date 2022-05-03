@@ -6,5 +6,6 @@ module.exports = {
     "no-empty-source": null,
     "alpha-value-notation": null,
     "color-function-notation": null,
+    "no-descending-specificity": null,
   },
 };
