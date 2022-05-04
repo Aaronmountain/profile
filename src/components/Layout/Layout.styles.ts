@@ -163,7 +163,7 @@ export default css`
         height: 100%;
         z-index: 8;
         background: #074141e8;
-        transition: 1s ease-in-out;
+        transition: 0.5s ease-in-out;
         display: flex;
         align-items: center;
         justify-content: center;
