@@ -13,13 +13,15 @@ export default css`
   }
 
   .description {
+    width: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     letter-spacing: 20px;
+    color: #fff;
     text-align: center;
-    color: rgb(255, 255, 255);
+    margin: auto;
 
     h2 {
       line-height: 1.8;
@@ -54,8 +56,6 @@ export default css`
     }
 
     @media screen and(max-width: 1090px) {
-      width: 100%;
-      margin: auto;
       font-size: 22px;
       line-height: 1.7;
 
