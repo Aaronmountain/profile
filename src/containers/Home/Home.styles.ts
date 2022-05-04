@@ -13,7 +13,7 @@ export default css`
   }
 
   .description {
-    width: 90%;
+    width: 80%;
     position: absolute;
     top: 50%;
     left: 50%;
