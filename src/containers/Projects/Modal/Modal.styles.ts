@@ -42,9 +42,27 @@ export default css`
       color: #fff;
     }
 
-    &__content-text {
+    &__content {
       padding: 24px 0;
       word-break: break-all;
+
+      &__link {
+        color: #fff;
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+          color: rgb(5, 3, 107);
+          transform: translateY(-5px);
+        }
+
+        &:visited {
+          color: lightblue;
+        }
+      }
+
+      &__text {
+        display: block;
+      }
     }
 
     &__carousel {
