@@ -80,7 +80,7 @@ export default css`
       }
 
       p {
-        text-indent: 2rem;
+        /* text-indent: 2rem; */
         font-size: 25px;
         font-weight: 400;
         line-height: 1.7;

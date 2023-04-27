@@ -74,7 +74,7 @@ const Layout = ({ children }: Props) => {
                       width="50%"
                       height="50%"
                     />
-                    {title}
+                    <span style={{ marginLeft: "0.25rem" }}>{title}</span>
                   </a>
                 </Link>
               </li>

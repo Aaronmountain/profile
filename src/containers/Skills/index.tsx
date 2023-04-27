@@ -10,28 +10,27 @@ const Skills = () => {
         <div className="skills__container__item">
           <h2>Front-end</h2>
           <ul>
-            <li>HTML、CSS、RWD</li>
-            <li>BootStrap</li>
-            <li>JavaScript</li>
-            <li>Typescript</li>
-            <li>React</li>
-            <li>Redux</li>
-            <li>Router</li>
+            <li>HTML5、CSS3、RWD</li>
+            <li>SCSS、BootStrap、TailwindCss</li>
+            <li>JavaScript、Typescript</li>
+            <li>React(React Hook, Functional component)</li>
+            <li>Redux、React-Router、NextJs</li>
             <li>Style-Component</li>
-            <li>Nextjs</li>
-            <li>style jsx</li>
-            <li>Unit test</li>
+            <li>Vue、Vuex、Vue-Router</li>
+            <li>Element-UI、Material-Ui</li>
           </ul>
         </div>
 
         <div className="skills__container__item">
-          <h2>Tools</h2>
+          <h2>Others</h2>
           <ul>
+            <li>Docker/Docker-compose</li>
             <li>Visual Studio Code</li>
-            <li>notpad++</li>
-            <li>Codepen</li>
-            <li>Git and GitHub</li>
-            <li>Webpack</li>
+            <li>Terminal、Linux 環境</li>
+            <li>Shell-Script</li>
+            <li>非同步處理、HTTP資料傳輸協議、WebSocket</li>
+            <li>Git and Git-Flow、GitLab、GitHub</li>
+            <li>Unit test(Jest)</li>
           </ul>
         </div>
 

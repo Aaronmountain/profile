@@ -20,25 +20,27 @@ const Modal = ({ type, handleClose }: Props) => {
         className="modal__close-icon"
         onClick={handleClose}
       />
-      {contentAry.map((_, index) => (
-        <p key={index} className="modal__content-text">
-          {contentAry[index]}
+      {contentAry.map((content) => (
+        <p key={content} className="modal__content-text">
+          {typeof content === "string"
+            ? content
+            : (content as string[]).map((word) => (
+                <span key={word} style={{ display: "block" }}>
+                  {word}
+                </span>
+              ))}
         </p>
       ))}
       <div className="modal__carousel">
         <div className="modal__carousel__item">
           <Carousel>
-            {imgNameAry.map((_, index) => {
-              const src = `/projects/modal/${type}/${imgNameAry[index]}`;
-
-              return (
-                <img
-                  key={`__carousel__item__${index}`}
-                  src={src}
-                  alt={`${type} of carousel`}
-                />
-              );
-            })}
+            {imgNameAry.map((imgName) => (
+              <img
+                key={imgName}
+                src={`/projects/modal/${type}/${imgName}`}
+                alt={`${type} of carousel`}
+              />
+            ))}
           </Carousel>
         </div>
       </div>
