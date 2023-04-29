@@ -42,7 +42,7 @@ const Profile = () => {
   return (
     <div className="profile">
       <div className="profile__photo">
-        <img src="/common/profile.jpg" alt="avator image" />
+        <img src="/common/profile.jpg" alt="avatar image" />
         <h1>戴成峯</h1>
       </div>
       <div className={`profile__introduction ${showIntroClass}`}>

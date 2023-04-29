@@ -12,6 +12,11 @@ export default css`
     text-align: center;
     line-height: 1.5;
 
+    &__skills {
+      max-height: 200px;
+      overflow-y: scroll;
+    }
+
     &__viewmore {
       color: #fff;
       transition: 0.5s linear;

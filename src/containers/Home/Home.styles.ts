@@ -55,7 +55,7 @@ export default css`
       }
     }
 
-    @media screen and(max-width: 1090px) {
+    @media screen and (max-width: 1090px) {
       font-size: 22px;
       line-height: 1.7;
 
@@ -64,7 +64,7 @@ export default css`
       }
     }
 
-    @media screen and(max-width: 480px) {
+    @media screen and (max-width: 480px) {
       font-size: 17px;
       font-weight: 700;
 

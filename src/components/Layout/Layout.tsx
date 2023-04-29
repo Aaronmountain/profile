@@ -23,19 +23,18 @@ const Layout = ({ children }: Props) => {
 
   return (
     <React.Fragment>
-      <input ref={menuRef} type="checkbox" id="rwdmenu" />
+      <input id="rwdmenu" type="checkbox" ref={menuRef} />
       <label htmlFor="rwdmenu" className="menu">
         <Image
           src="/layout/menu.svg"
           alt="rwd menu bar"
-          width="100%"
-          height="100%"
-          objectFit="cover"
+          width="40"
+          height="40"
         />
       </label>
       <header className={cx({ home: isHomeRoute, introduction: !isHomeRoute })}>
         <Link href="/home">
-          <a className="logo">My WebSite</a>
+          <span className="logo">My WebSite</span>
         </Link>
         <ul className="navbar">
           {Nav.map(({ title, href }) => (
@@ -61,21 +60,16 @@ const Layout = ({ children }: Props) => {
           <ul className="contact">
             {footerNav.map(({ title, href, imgName }) => (
               <li key={`__footer__contact__${title}`} className="contact__item">
-                <Link href={href}>
-                  <a
-                    className="contact__item__link"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
+                <Link href={href} target="_blank" rel="noreferrer noopener">
+                  <div className="contact__item__link">
                     <Image
                       src={`/common/${imgName}.svg`}
                       alt={imgName}
-                      objectFit="cover"
-                      width="50%"
-                      height="50%"
+                      width="50"
+                      height="50"
                     />
                     <span style={{ marginLeft: "0.25rem" }}>{title}</span>
-                  </a>
+                  </div>
                 </Link>
               </li>
             ))}

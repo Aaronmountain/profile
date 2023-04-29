@@ -103,7 +103,7 @@ export default css`
         justify-content: flex-end;
         padding: 1% 0;
 
-        a {
+        &__link {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -116,18 +116,11 @@ export default css`
             transform: translateY(-10px);
           }
         }
-
-        img {
-          width: 50px;
-          margin-right: 0.25rem;
-        }
       }
     }
   }
 
   .menu {
-    width: 40px;
-    height: 40px;
     display: none;
     transition: 1s ease-in-out;
   }

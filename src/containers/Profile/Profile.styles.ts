@@ -16,6 +16,7 @@ export default css`
         position: relative;
         left: -1000px;
         animation: img-slide-in 1s linear forwards;
+        margin: 0 auto;
       }
 
       @keyframes img-slide-in {
@@ -33,7 +34,6 @@ export default css`
       }
 
       h1 {
-        font-size: 60px;
         font-weight: 500;
         padding-bottom: 80px;
         padding-left: 30px;

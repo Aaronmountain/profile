@@ -21,7 +21,7 @@ const Description = ({ description, handleModalType }: Props) => {
   return (
     <div className="desc">
       <h2>{description.title}</h2>
-      <p>{description.skills}</p>
+      <p className="desc__skills">{description.skills}</p>
       <button
         type="button"
         onClick={handleClick}
@@ -29,20 +29,13 @@ const Description = ({ description, handleModalType }: Props) => {
       >
         View More
       </button>
-      <Link href={description.githubUrl}>
-        <a
-          className="github-link swipe-zoom-up"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src="/common/github.svg"
-            alt="GitHub"
-            objectFit="cover"
-            width="100%"
-            height="100%"
-          />
-        </a>
+      <Link
+        href={description.githubUrl}
+        className="github-link swipe-zoom-up"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image src="/common/github.svg" alt="GitHub" width="50" height="50" />
       </Link>
       <style jsx>{styles}</style>
     </div>

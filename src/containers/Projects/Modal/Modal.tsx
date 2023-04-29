@@ -36,15 +36,15 @@ const Modal = ({ type, handleClose }: Props) => {
             {content.map((word) => {
               if (word?.type === "link") {
                 return (
-                  <Link key={word.text} href={word.href}>
-                    <a
-                      className="modal__content__link"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      style={{ display: "block" }}
-                    >
-                      {word.text}
-                    </a>
+                  <Link
+                    key={word.text}
+                    href={word.href}
+                    className="modal__content__link"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    style={{ display: "block" }}
+                  >
+                    {word.text}
                   </Link>
                 );
               }
