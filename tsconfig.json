@@ -29,9 +29,6 @@
     ],
     "baseUrl": "src",
     "paths": {
-      "containers": [
-        "containers"
-      ],
       "components": [
         "components"
       ],

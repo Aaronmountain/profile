@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {} */
+
+@layer components {
+  .text-title-shadow {
+    @apply text-center text-purple-600;
+    text-shadow:
+      1px 1px 1px rgba(234, 179, 8, 0.2),
+      1px 2px 1px rgba(234, 179, 8, 0.2),
+      1px 3px 1px rgba(234, 179, 8, 0.2),
+      1px 4px 1px rgba(234, 179, 8, 0.2),
+      1px 5px 1px rgba(234, 179, 8, 0.2);
+  }
+}
+
+@layer utilities {
+  .layout--nav-link {
+    @apply text-white cursor-pointer relative after:absolute after:left-[50%] after:translate-x-[-50%] after:bottom-[-6px] after:w-0 after:h-[3px] after:bg-purple-600 after:transition-all after:duration-500 after:ease-in-out hover:after:w-full
+  }
+}
